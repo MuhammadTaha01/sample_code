@@ -1,4 +1,3 @@
-# sample_code
-Some sample code snippets
+# DEURDU website
 
-This repository contains some sample code that I might need to shuffle across multiple machines. Might evolve into something more meaningful later...hopefully!
+This space is meant to contain code, data and configuration related to a multilingual blog/website.

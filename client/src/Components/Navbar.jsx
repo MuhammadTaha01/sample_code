@@ -36,10 +36,10 @@ const Navbar = () => {
       {/* First Navbar */}
       <div className="bg-green-700">
         <div
-          className={`flex bg-green-700 gap-[1150px] ${i18n.language === 'ur' ? 'gap-[1130px]' : 'gap-[1150px]'}
+          className={`flex items-center bg-green-700 gap-[1150px] ${i18n.language === 'ur' ? 'gap-[1130px]' : 'gap-[1150px]'}
                                                           ${i18n.language === 'de' ? 'gap-[1090px]' : 'gap-[1140px]'}`}
         >
-          <div className="flex">
+          <div className={`${i18.language === 'ur' ? 'urdu' : ''} flex`}>
             <Link to={`/${i18n.language}`}>
               <h3 className="text-white text-[20px] mr-3 ml-4">DeUrdu</h3>
             </Link>
@@ -86,7 +86,7 @@ const Navbar = () => {
                   )}
                 </div>
               )}
-              <div className="">
+              <div className={`${i18.language === 'ur' ? 'urdu' : ''}`}>
                 <Link to={`/${i18n.language}/login`}>
                   <button className="text-white text-[15px]  bg-gray-500 px-2 my-2 rounded-lg hover:bg-gray-500 transition py-2 hover:text-white">
                     {login}
@@ -98,7 +98,7 @@ const Navbar = () => {
       </div>
 
       {/* Second Navbar */}
-      <div className={`flex bg-gray-700 ${i18n.language === 'ur' ? 'urdu gap-[770px]' : 'gap-[880px]'}
+      <div className={`flex bg-gray-700 ${i18n.language === 'ur' ? 'urdu gap-[769px]' : 'gap-[880px]'}
                  ${i18n.language === 'de' ? 'gap-[700px]' : 'gap-[880px]'}`}>
         <div className="flex gap-10 py-2">
           <Link to={`/${i18n.language}`}>

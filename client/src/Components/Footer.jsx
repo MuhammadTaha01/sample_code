@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import i18 from "../i18.js";
 
 const Footer = () =>
 {
@@ -8,16 +9,16 @@ const Footer = () =>
     const {t} = useTranslation();
     const {ul1,ul2,ul3,ul4} = t('ulTranslation')
 
+    // <div className="bg-green-200 py-5 flex space-x-[1050px]">
     return(
-        <div className="bg-green-200 py-5 flex space-x-[1050px]">
+        <div className={`${i18.language === 'ur' ? 'urdu' : ''} bg-green-200 py-5 flex space-x-[1050px]`}>
             <ul className="ml-10 space-y-4">
                 <Link to={'/'}>
-                    <li className="hover:underline transition cursor-pointer">{ul1}</li>
+                    <li className="hover:underline transition cursor-pointer py-1">{ul1}</li>
                 </Link>
-                <li className="hover:underline transition cursor-pointer">{ul2}</li>
-                <li className="hover:underline transition cursor-pointer">{ul3}</li>
-                <li className="hover:underline transition cursor-pointer">{ul4}</li>
-        
+                <li className="hover:underline transition cursor-pointer py-1">{ul2}</li>
+                <li className="hover:underline transition cursor-pointer py-1">{ul3}</li>
+                <li className="hover:underline transition cursor-pointer py-1">{ul4}</li>
             </ul>
             <div className="flex flex-col">
                 <h3>DeUrdu</h3>

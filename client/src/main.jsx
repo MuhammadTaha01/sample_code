@@ -4,7 +4,7 @@ import { ClerkProvider } from '@clerk/clerk-react'; // Remove RedirectToSignIn i
 import App from './App.jsx';
 import './index.css';
 
-const PUBLISHABLE_KEY = 'pk_test_c2VjdXJlLXR1cnRsZS02Mi5jbGVyay5hY2NvdW50cy5kZXYk';
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
